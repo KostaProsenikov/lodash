@@ -4,9 +4,9 @@
   "description": "",
   "main": "file.ts",
   "scripts": {
-    "start": "tsc file.ts && node file.js"
+    "start": "tsc file.ts -outDir dist/ && node dist/file.js"
   },
-  "author": "",
+  "author": "Kostadin Prosenikov",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^11.13.4",

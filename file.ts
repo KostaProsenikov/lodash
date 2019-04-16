@@ -1,3 +1,4 @@
+
 import * as _ from 'lodash';
 
 // ------------------------------------------
@@ -80,3 +81,31 @@ console.log('sortedArr', sortedArr);
 // Sorting array of objects by property END
 // ------------------------------------------
 
+
+
+// ------------------------------------------
+//        Concatinate array START
+// ------------------------------------------
+
+const arrayOne = [1, 3, 5];
+const concatArray = _.concat(arrayOne, 7, 9, [10]);
+ 
+console.log('concated array', concatArray);
+// => [ 1, 3, 5, 7, 9, 10 ]
+
+const productsArr = [
+  {id: 1, name: 'iPhone', price: 1000 },
+  {id: 2, name: 'OnePlus 6T', price: 600 },
+  {id: 3, name: 'Pixel 3', price: 650 },
+]
+
+const concatProducts = _.concat(productsArr, 
+  {id: 4, name: 'Samsung A80', price: 750 },
+  {id: 5, name: 'Samsung S10+', price: 1000 },
+);
+
+console.log('concated Products', concatProducts);
+
+// ------------------------------------------
+//        Concatinate array END
+// ------------------------------------------
