@@ -252,6 +252,20 @@ console.log('evens array', evens);
 // --------------------------------------------
 
 
+
+// --------------------------------------------
+//    Create array with unique ids and label
+//          for every item START
+// --------------------------------------------
+
+const uniqueArr = _.times(6, _.uniqueId.bind(null, 'name_'));
+// => [ 'name_1', 'name_2', 'name_3', 'name_4', 'name_5', 'name_6' ]
+console.log('unique array', uniqueArr);
+
+// --------------------------------------------
+//    Create array with unique ids and label
+//          for every item END
+// --------------------------------------------
+
+
 // Up to Reverse -> _.reverse(array)
-
-
