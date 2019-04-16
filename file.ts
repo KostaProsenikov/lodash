@@ -204,3 +204,54 @@ console.log('pull values from array ', array);
 //    Remove values from array END
 // --------------------------------------------
 
+// ----------------------------------------------
+// Remove object values from array by value START
+// ----------------------------------------------
+
+
+const arrayValues = [
+   { x: 1, y: 1 },
+   { x: 2 }, 
+   { x: 3 }, 
+   { x: 1 }
+];
+ 
+
+// Arguments
+// array (Array): The array to modify.
+// values (Array): The values to remove.
+// [iteratee=_.identity] (Function): The iteratee invoked per element.
+
+_.pullAllBy(arrayValues, [{ x: 1 }, { x: 3 }], 'x');
+console.log(arrayValues);
+// => [{ 'x': 2 }]
+
+// --------------------------------------------
+// Remove object values from array by value END
+// --------------------------------------------
+
+
+
+// --------------------------------------------
+// Remove from array by some filter values Start
+// --------------------------------------------
+
+const arrayRemove = [1, 2, 3, 4];
+const evens = _.remove(arrayRemove, (n) => {
+  return n % 2 === 0;
+});
+ 
+console.log('odds array', arrayRemove);
+// => [1, 3]
+ 
+console.log('evens array', evens);
+// => [2, 4]
+
+// --------------------------------------------
+// Remove from array by some filter values End
+// --------------------------------------------
+
+
+// Up to Reverse -> _.reverse(array)
+
+
