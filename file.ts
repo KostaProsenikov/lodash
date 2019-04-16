@@ -125,6 +125,19 @@ _.head([1, 2, 3]);
 
 
 // ------------------------------------------
+//     Get last element from array START
+// ------------------------------------------
+
+_.last([1, 2, 3]);
+// => 3
+
+// ------------------------------------------
+//     Get last element from array END
+// ------------------------------------------
+
+
+
+// ------------------------------------------
 //     Get intersection from 2 arrays and
 //     then do operation on it START
 // ------------------------------------------
@@ -161,4 +174,33 @@ console.log('object interception ', interObject);
 //     Get intersection from 2 object arrays
 //                    END
 // ------------------------------------------
+
+// --------------------------------------------
+//     Join Array Elements with a string START
+// --------------------------------------------
+
+_.join(['a', 'b', 'c'], '~');
+// => 'a~b~c'
+console.log('stringify array ', _.join(['a', 'b', 'c'], ','));
+// => 'a,b,c'
+
+// --------------------------------------------
+//     Join Array Elements with a string END
+// --------------------------------------------
+
+
+// --------------------------------------------
+//    Remove values from array START
+// --------------------------------------------
+
+
+const array = ['a', 'b', 'c', 'a', 'b', 'c'];
+_.pull(array, 'a', 'c');
+// => ['b', 'b']
+
+console.log('pull values from array ', array);
+
+// --------------------------------------------
+//    Remove values from array END
+// --------------------------------------------
 
