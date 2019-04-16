@@ -109,3 +109,56 @@ console.log('concated Products', concatProducts);
 // ------------------------------------------
 //        Concatinate array END
 // ------------------------------------------
+
+
+// ------------------------------------------
+//     Get first element from array START
+// ------------------------------------------
+
+_.head([1, 2, 3]);
+// => 1
+
+// ------------------------------------------
+//     Get first element from array END
+// ------------------------------------------
+
+
+
+// ------------------------------------------
+//     Get intersection from 2 arrays and
+//     then do operation on it START
+// ------------------------------------------
+
+//  Compare the digits using the Math.floor func
+// i.e Math.floor(2.1) => 2,  Math.floor(2.3) => 2
+// so they are interception of the arrays
+
+const intercept = _.intersectionBy([2.1, 3.3], [2.3, 3.4], Math.floor);
+console.log('intercept', intercept);
+// => [2.1]
+
+
+// ------------------------------------------
+//     Get intersection from 2 arrays and
+//     then do operation on it END
+// ------------------------------------------
+
+
+// ------------------------------------------
+//     Get intersection from 2 object arrays
+//                    START
+// ------------------------------------------
+
+const arrObjects1 = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
+const arrObjects2 = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
+ 
+const interObject = _.intersectionWith(arrObjects1, arrObjects2, _.isEqual);
+// Compare if any object is equal to another
+// => [{ 'x': 1, 'y': 2 }]
+console.log('object interception ', interObject);
+
+// ------------------------------------------
+//     Get intersection from 2 object arrays
+//                    END
+// ------------------------------------------
+
