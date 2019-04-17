@@ -5,10 +5,10 @@ import * as _ from 'lodash';
 // Find Min And Max Property START
 
 const objects = [
-    {name: 'beer', price: 10 }, 
-    {name: 'seeds', price: 25 }, 
-    {name: 'event', price: 50 }, 
-    {name: 'concert', price: 100 }, 
+    {name: 'mouse', price: 30 }, 
+    {name: 'generic headset', price: 35 }, 
+    {name: 'bose headphones', price: 150 }, 
+    {name: 'jbl headphones', price: 70 }, 
 ];
 
 const result  = _.minBy(objects, 'price');
