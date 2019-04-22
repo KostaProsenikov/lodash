@@ -267,5 +267,18 @@ console.log('unique array', uniqueArr);
 //          for every item END
 // --------------------------------------------
 
+// --------------------------------------------
+//              Reverse an Array
+//                 START
+// --------------------------------------------
+const normalArray = [1, 2, 3];
+ 
+const reversed = _.reverse(normalArray);
+// => [3, 2, 1]
+console.log('reverse', reversed);
 
-// Up to Reverse -> _.reverse(array)
+
+// --------------------------------------------
+//              Reverse an Array
+//                 END
+// --------------------------------------------
