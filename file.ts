@@ -73,21 +73,8 @@ export class lodashMethods {
   // Sorting array of objects by property START
   // ------------------------------------------
 
-  sortCollectionByProperty() {
-    const movies = [
-      { name: 'Avengersssss',   year: 2015 },
-      { name: 'Avengers: Infinity War',   year: 2016 },
-      { name: 'Avengers: Endgame',   year: 2019 },
-      { name: 'The Favourite',   year: 2019 },
-      { name: 'Spider Man',   year: 2012 },
-      { name: 'The Glasssessss',   year: 2019 },
-      { name: 'Catch me if you can',   year: 2009 },
-      { name: 'Arenatests',   year: 1990 },
-      { name: 'Add new!!!',   year: 2015 },
-    ];
-      
-    // Sort by `user` in ascending order and by `age` in descending order.
-    const sortedArr =  _.orderBy(movies, ['year', 'name'], ['desc', 'asc']);
+  sortCollectionByProperty(initialArr: any[], sortParams: any[], sortOptions: any[]) {
+    const sortedArr =  _.orderBy(initialArr, [...sortParams], [...sortOptions]);
     // console.log('sortedArr', sortedArr);
     return sortedArr;
   }
@@ -101,26 +88,13 @@ export class lodashMethods {
   //        Concatinate array START
   // ------------------------------------------
 
-  concatArr() {
-    const arrayOne = [1, 3, 5];
-    const concatArray = _.concat(arrayOne, 7, 9, [10]);
-    
-    console.log('concated array', concatArray);
-    // => [ 1, 3, 5, 7, 9, 10 ]
-  
-    const productsArr = [
-      {id: 1, name: 'iPhone', price: 1000 },
-      {id: 2, name: 'OnePlus 6T', price: 600 },
-      {id: 3, name: 'Pixel 3', price: 650 },
-    ]
-  
-    const concatProducts = _.concat(productsArr, 
-      {id: 4, name: 'Samsung A80', price: 750 },
-      {id: 5, name: 'Samsung S10+', price: 1000 },
-    );
-  
-    console.log('concated Products', concatProducts);
-    return concatProducts;
+  concatArr(initialArr: any[], secondArr: any[]) {
+    let concatArray = [];
+    if (initialArr.length && secondArr.length) {
+      concatArray = _.concat(initialArr, secondArr)
+      console.log('concated array', concatArray);
+    }
+    return concatArray;
   }
 
   // ------------------------------------------
