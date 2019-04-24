@@ -106,9 +106,8 @@ export class lodashMethods {
   //     Get first element from array START
   // ------------------------------------------
 
-  getFirstElement() {
-    const arr = [1, 2, 3];
-    const firstEl = _.head(arr);
+  getFirstElement(initialArr: any[]) {
+    const firstEl = _.head(initialArr);
     console.log('Head', firstEl);
     // => 1
     return firstEl;
@@ -123,9 +122,8 @@ export class lodashMethods {
   //     Get last element from array START
   // ------------------------------------------
 
-  getLastElement() {
-    const arr = [1, 2, 3];
-    const lastEl = _.last(arr);
+  getLastElement(initialArr: any[]) {
+    const lastEl = _.last(initialArr);
     console.log('Last', lastEl);
     // => 1
     return lastEl;
@@ -145,10 +143,10 @@ export class lodashMethods {
   // i.e Math.floor(2.1) => 2,  Math.floor(2.3) => 2
   // so they are interception of the arrays
 
-  interSectBy() {
-    const intercept = _.intersectionBy([2.1, 3.3], [2.3, 3.4], Math.floor);
-    console.log('intercept', intercept);
-    // => [2.1]  
+  interSectBy(initialArr: any[], secondArr: any[], operation: any) {
+    const copy = _.slice(initialArr);
+    const intercept = _.intersectionBy(copy, secondArr, operation);
+    console.log('intercept', intercept); 
     return intercept;
   }
 
@@ -183,8 +181,8 @@ export class lodashMethods {
   //     Join Array Elements with a string START
   // --------------------------------------------
 
-  arrJoin() {
-    const stringifiedArr =  _.join(['a', 'b', 'c'], ',');
+  arrJoin(initialArr: any[], stringOperator: string) {
+    const stringifiedArr =  _.join(initialArr, stringOperator);
     console.log('stringify array ', stringifiedArr);
     // => 'a,b,c'
     return stringifiedArr;
@@ -199,13 +197,13 @@ export class lodashMethods {
   //    Remove values from array START
   // --------------------------------------------
 
-  arrRemoveValues() {
-    const array = ['a', 'b', 'c', 'a', 'b', 'c'];
-    _.pull(array, 'a', 'c');
-    // => ['b', 'b']
-  
-    console.log('pull values from array ', array);
-    return array;
+  arrRemoveValues(initialArr: any[], params: any) {
+    const copy = initialArr.slice();
+    const removedValues = _.pull(copy, ...params);
+    
+    console.log('Initial Array: ', initialArr);
+    console.log('Pull values from array ', removedValues);
+    return removedValues;
   }
 
   // --------------------------------------------

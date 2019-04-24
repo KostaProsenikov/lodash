@@ -8,7 +8,11 @@ const getMethod = (urlString: string, methodToCall: string, params?: any[], arrT
     app.get(`/api/${urlString}/`, (_req: any, res: any) => {
         let obj = {};
         if (arrToSend) {
-            obj = { initialArr: arrToSend, arr: lodash[methodToCall](arrToSend, ...params)};
+            if (params.length && params[0] instanceof Array) {
+                obj = { initialArr: arrToSend, secArray: [...params], result: lodash[methodToCall](arrToSend, ...params)};
+            } else {
+                obj = { initialArr: arrToSend, result: lodash[methodToCall](arrToSend, ...params)};
+            }
         } else {
             obj = { arr: lodash[methodToCall](...params) };
         }
@@ -55,12 +59,23 @@ const concatProducts = [
     {id: 5, name: 'Samsung S10+', price: 1000 },
 ];
 
-getMethod('concatProds', 'concatArr', [concatProducts], productsArr);
+getMethod('concat-products', 'concatArr', [concatProducts], productsArr);
 
 // -----------------------------------------
 // Concatenate 2 product collections end
 // -----------------------------------------
 
+getMethod('head', 'getFirstElement', [], productsArr);
+
+getMethod('last', 'getLastElement', [], productsArr);
+
+getMethod('stringify', 'arrJoin', [','], ['a', 'b', 'c']);
+
+getMethod('remove-values', 'arrRemoveValues', [['b', 'c']], ['a', 'b', 'c', 'a', 'b', 'c']);
+
+getMethod('intersect-by', 'interSectBy', [[2.3, 3.4], Math.floor], [1.1, 3.3]);
+
+// Up to IntersectWith
 
 // ---------------------------------
 //          Server Start
