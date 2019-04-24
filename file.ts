@@ -9,7 +9,7 @@ export class lodashMethods {
   //        Find Min And Max Property START
   // ------------------------------------------
 
-  returnMinPrice() {
+  returnMinPrice(minPrice) {
     const objects = [
       {name: 'mouse', price: 30 },
       {name: 'generic headset', price: 35 }, 
@@ -21,7 +21,9 @@ export class lodashMethods {
     const result2  = _.maxBy(objects, 'price');
     console.log('Min price object', result);
     console.log('Max price object', result2);
-
+    if (minPrice) {
+      return result
+    }
     return result2;
   }
 
@@ -33,16 +35,15 @@ export class lodashMethods {
   //    Split array into equal parts START
   // ------------------------------------------
 
-  splitArray() {
-    const longArray = [1, 3 , 5, 6, 7, 10];
+  splitArray(initialArr, splitChunks) {
     // Second param is take each two values and split them;
-    const splitArrayByTwo = _.chunk(longArray, 2);
+    const splitArray = _.chunk(initialArr, splitChunks);
 
     // Split array by each three values
-    console.log('split array', splitArrayByTwo);
+    console.log('split array', splitArray);
     // const splitArraysByThree = _.chunk(longArray, 3);
     // console.log('split array', splitArraysByThree);
-    return splitArrayByTwo;
+    return splitArray;
   }
   
   // ------------------------------------------
@@ -53,14 +54,13 @@ export class lodashMethods {
   //      Fill in array with values START
   // ------------------------------------------
 
-  fillArrayWithValues() {
-    const arrWithNums = [2, 4, 6, 8];
+  fillArrayWithValues(initialArr, valueToFill, startInd, endInd) {
     // Arguments
     // 1.Send the array as first arg
     // 2. Value to be filled in
     // 3. Start index to fill with value
     // 4. End index to fill with value
-    const newArr = _.fill(arrWithNums, 5, 1, 3);
+    const newArr = _.fill(initialArr, valueToFill, startInd, endInd);
     console.log('fill array values', newArr);
     return newArr;
   }
