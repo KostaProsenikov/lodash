@@ -31,12 +31,9 @@ module.exports = () => {
         module: 
         { rules: 
             [{  
-                test: /\.js$/, 
+                test: /\.ts$/, 
                 exclude: /node_modules/, 
-                use: [{ loader: "babel-loader",
-                options: {
-                    presets: ['babel-preset-env']
-                } 
+                use: [{ loader: "ts-loader"
                 }]
             }],
         },
@@ -44,28 +41,3 @@ module.exports = () => {
         ]
     }
 }
-
-// module.exports = {
-// resolve: {
-//     extensions: ['.js', '.jsx', '.ts']
-// },
-// context: __dirname,
-// entry: {
-//     app: ['./express.ts']
-// },
-// output: {
-//     path: path.join(__dirname, '/dist'),
-//     filename: 'bundle.js'
-// },
-// module: {
-//     rules: [
-//         {
-//             test: /\.js$/,
-//             exclude: /node_modules/,
-//             use: {
-//                 loader: "ts-loader"
-//             }
-//         }
-//     ]
-// }
-// };

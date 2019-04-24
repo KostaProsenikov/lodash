@@ -9,7 +9,7 @@ export class lodashMethods {
   //        Find Min And Max Property START
   // ------------------------------------------
 
-  returnMinPrice(minPrice) {
+  returnMinPrice(minPrice: boolean) {
     const objects = [
       {name: 'mouse', price: 30 },
       {name: 'generic headset', price: 35 }, 
@@ -19,11 +19,11 @@ export class lodashMethods {
 
     const result  = _.minBy(objects, 'price');
     const result2  = _.maxBy(objects, 'price');
-    console.log('Min price object', result);
-    console.log('Max price object', result2);
     if (minPrice) {
+      console.log('Min price object', result);
       return result
     }
+    console.log('Max price object', result2);
     return result2;
   }
 
