@@ -1,9 +1,9 @@
 const express = require('express');
-const app = express();
-const port = 3333;
+const app     = express();
+const port    = 3333;
 import { lodashMethods } from './file';
 
-app.get('/', (_req, res) => {
+app.get('/', (_req: any, res: any) => {
     const lodash = new lodashMethods();
     const arr = lodash.sortCollectionByProperty();
     const obj = { result: arr }
@@ -11,5 +11,5 @@ app.get('/', (_req, res) => {
 });
 
 app.listen(port, () =>
-    console.log(`Example app listening on port ${port}!`),
+    console.log(`Rest API started: http://localhost:${port}/`),
 );

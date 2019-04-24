@@ -85,7 +85,7 @@ export class lodashMethods {
     ];
       
     // Sort by `user` in ascending order and by `age` in descending order.
-    const sortedArr =  _.orderBy(movies, ['year', 'name'], ['desc', 'desc']);
+    const sortedArr =  _.orderBy(movies, ['year', 'name'], ['desc', 'asc']);
     // console.log('sortedArr', sortedArr);
     return sortedArr;
   }
