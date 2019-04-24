@@ -2,7 +2,17 @@
 
 Lodash is just an examples to show functionality of lodash library
 
-# Use
+# How to start dev server
+
+Run in parallel the two commands:
+`npm start` -> to build the bundle js and
+` nodemon ./dist/bundle.js localhost 3333` -> to start the backend dev server
+
+The server API will start running at:
+
+http://localhost:3333/api/
+
+# Usage
 
 You can run the scripts using `npm start`
 and the script will be a js file from the ts;

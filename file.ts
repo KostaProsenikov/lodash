@@ -75,13 +75,15 @@ export class lodashMethods {
 
   sortCollectionByProperty() {
     const movies = [
-      { name: 'Avengers',   year: 2015 },
+      { name: 'Avengersssss',   year: 2015 },
       { name: 'Avengers: Infinity War',   year: 2016 },
       { name: 'Avengers: Endgame',   year: 2019 },
       { name: 'The Favourite',   year: 2019 },
       { name: 'Spider Man',   year: 2012 },
-      { name: 'The Glass',   year: 2019 },
+      { name: 'The Glasssessss',   year: 2019 },
       { name: 'Catch me if you can',   year: 2009 },
+      { name: 'Arenatests',   year: 1990 },
+      { name: 'Add new!!!',   year: 2015 },
     ];
       
     // Sort by `user` in ascending order and by `age` in descending order.

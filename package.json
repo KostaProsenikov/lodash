@@ -24,6 +24,7 @@
     "babel-loader": "^8.0.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
+    "nodemon": "^1.18.11",
     "ts-loader": "^5.4.3",
     "typescript": "^3.4.3",
     "webpack": "^4.30.0",
