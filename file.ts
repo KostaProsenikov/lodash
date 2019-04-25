@@ -143,7 +143,7 @@ export class lodashMethods {
   // i.e Math.floor(2.1) => 2,  Math.floor(2.3) => 2
   // so they are interception of the arrays
 
-  interSectBy(initialArr: any[], secondArr: any[], operation: any) {
+  intersectBy(initialArr: any[], secondArr: any[], operation: any) {
     const copy = _.slice(initialArr);
     const intercept = _.intersectionBy(copy, secondArr, operation);
     console.log('intercept', intercept); 
@@ -161,13 +161,11 @@ export class lodashMethods {
   //                    START
   // ------------------------------------------
 
-  interSectWith() {
-    const arrObjects1 = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];
-    const arrObjects2 = [{ 'x': 1, 'y': 1 }, { 'x': 1, 'y': 2 }];
-    
-    const interObject = _.intersectionWith(arrObjects1, arrObjects2, _.isEqual);
-    // Compare if any object is equal to another
-    // => [{ 'x': 1, 'y': 2 }]
+  intersectWith(arrayOne: any[], arrayTwo: any[]) {
+    const interObject = _.intersectionWith(arrayOne, arrayTwo, _.isEqual);
+    // Compare if any object fron one array is equal 
+    // to another object in another array
+
     console.log('object interception ', interObject);
     return interObject;
   }
@@ -214,24 +212,15 @@ export class lodashMethods {
   // Remove object values from array by value START
   // ----------------------------------------------
 
-  removeValuesFromArrByProp() {
-    const arrayValues = [
-      { x: 1, y: 1 },
-      { x: 2 }, 
-      { x: 3 }, 
-      { x: 1 }
-    ];
-    
-  
+  removeValuesFromArrByProp(initialArr: any[], valuesToRemove: any[], iteratee: string) {
     // Arguments
     // array (Array): The array to modify.
     // values (Array): The values to remove.
     // [iteratee=_.identity] (Function): The iteratee invoked per element.
   
-    _.pullAllBy(arrayValues, [{ x: 1 }, { x: 3 }], 'x');
-    console.log(arrayValues);
-    // => [{ 'x': 2 }]
-    return arrayValues;
+    _.pullAllBy(initialArr, valuesToRemove, iteratee);
+    console.log('res', initialArr);
+    return initialArr;
   }
 
   // --------------------------------------------
@@ -267,8 +256,8 @@ export class lodashMethods {
   //          for every item START
   // --------------------------------------------
 
-  createUniqueArr() {
-    const uniqueArr = _.times(6, _.uniqueId.bind(null, 'name_'));
+  createUniqueArr(times: number, startString: string) {
+    const uniqueArr = _.times(times, _.uniqueId.bind(null, startString));
     // => [ 'name_1', 'name_2', 'name_3', 'name_4', 'name_5', 'name_6' ]
     console.log('unique array', uniqueArr);
     return uniqueArr;
@@ -284,11 +273,8 @@ export class lodashMethods {
   //                 START
   // --------------------------------------------
 
-  reverseArr() {
-    const normalArray = [1, 2, 3];
-  
-    const reversed = _.reverse(normalArray);
-    // => [3, 2, 1]
+  reverseArr(initialArr: any[]) {
+    const reversed = _.reverse(initialArr);
     console.log('reverse', reversed);
     return reversed;
   }

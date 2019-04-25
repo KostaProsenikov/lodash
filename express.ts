@@ -73,9 +73,31 @@ getMethod('stringify', 'arrJoin', [','], ['a', 'b', 'c']);
 
 getMethod('remove-values', 'arrRemoveValues', [['b', 'c']], ['a', 'b', 'c', 'a', 'b', 'c']);
 
-getMethod('intersect-by', 'interSectBy', [[2.3, 3.4], Math.floor], [1.1, 3.3]);
+const objOfCars = [
+    { brand: 'BMW', model: 'X5', topspeed: 250 },
+    { brand: 'Tesla', model: 'S', topspeed: 350 },
+    { brand: 'Bugatti', model: 'Chiron', topspeed: 400 },
+    { brand: 'Ferrari', model: 'Enzo', topspeed: 399 },
+];
 
-// Up to IntersectWith
+getMethod('remove-from-collection', 'removeValuesFromArrByProp', 
+        [ [{ 'brand': 'BMW' }, { 'brand': 'Bugatti' } ], 'brand'], objOfCars);
+
+getMethod('intersect-by', 'intersectBy', [[2.3, 3.4], Math.floor], [1.1, 3.3]);
+
+
+// Get two objects intersection
+const cars2 = [  
+    { brand: 'BMW', model: 'X5', topspeed: 250 },
+    { brand: 'Tesla', model: 'S', topspeed: 350 }
+];
+getMethod('intersect-with', 'intersectWith', [cars2], objOfCars);
+
+getMethod('create-unique', 'createUniqueArr', [10, 'start_']);
+
+const normalArray = [1, 2, 3];
+getMethod('reverse', 'reverseArr', [], normalArray);
+
 
 // ---------------------------------
 //          Server Start
