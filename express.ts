@@ -86,12 +86,20 @@ getMethod('remove-from-collection', 'removeValuesFromArrByProp',
 getMethod('intersect-by', 'intersectBy', [[2.3, 3.4], Math.floor], [1.1, 3.3]);
 
 
-// Get two objects intersection
+// -----------------------------------------
+//    Get two objects intersection Start
+// -----------------------------------------
+
 const cars2 = [  
     { brand: 'BMW', model: 'X5', topspeed: 250 },
     { brand: 'Tesla', model: 'S', topspeed: 350 }
 ];
 getMethod('intersect-with', 'intersectWith', [cars2], objOfCars);
+
+// -----------------------------------------
+//    Get two objects intersection End
+// -----------------------------------------
+
 
 getMethod('create-unique', 'createUniqueArr', [10, 'start_']);
 
