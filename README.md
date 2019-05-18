@@ -1,6 +1,6 @@
 # lodash
 
-Lodash is just an examples to show functionality of lodash library
+Examples using Lodash Library
 
 # How to start dev server
 
@@ -15,7 +15,7 @@ http://localhost:3333/api/
 # Usage
 
 You can run the scripts using `npm start`
-and the script will be a js file from the ts;
+and the script will bundle together js files from the ts;
 
 # Main file
 Main file is the file.ts, which holds information about lodash library and its usage
