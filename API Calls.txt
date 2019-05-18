@@ -1,0 +1,14 @@
+1. Min -> http://localhost:3333/api/min/
+2. Max -> http://localhost:3333/api/max/
+3. Split -> http://localhost:3333/api/split/
+4. Fill -> http://localhost:3333/api/fill/
+5. Concat -> http://localhost:3333/api/concat/
+6. Concat Array of Objects -> http://localhost:3333/api/concat-products/
+7. Get first Element (Head) -> http://localhost:3333/api/head/
+8. Get last Element (Last) -> http://localhost:3333/api/last/
+9. Stringify Array -> http://localhost:3333/api/stringify/
+10. Remove Objects from Collection -> http://localhost:3333/api/remove-from-collection/
+11. Get intersection of two arrays -> http://localhost:3333/api/intersect-with
+12. Create array of unique values -> http://localhost:3333/api/create-unique
+13. Reverse an array -> http://localhost:3333/api/reverse
+14. 

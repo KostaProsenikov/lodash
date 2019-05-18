@@ -32,11 +32,18 @@ const movies = [
     { name: 'Add new!!!',   year: 2015 },
 ];
 
+const shoppingCart = [
+    {name: 'mouse', price: 30 },
+    {name: 'generic headset', price: 35 }, 
+    {name: 'bose headphones', price: 150 }, 
+    {name: 'jbl headphones', price: 70 }, 
+];
+
 getMethod('sort', 'sortCollectionByProperty', [ ['year', 'name'], ['desc', 'asc']], movies);
 
-getMethod('min', 'returnMinPrice', [true]);
+getMethod('min', 'returnMinPrice', [true, 'price'], shoppingCart);
 
-getMethod('max', 'returnMinPrice', [false]);
+getMethod('max', 'returnMinPrice', [false, 'price'], shoppingCart);
 
 getMethod('split', 'splitArray', [2], [1, 3 , 5, 6, 7, 10]);
 
