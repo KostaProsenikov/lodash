@@ -21,15 +21,13 @@ const getMethod = (urlString: string, methodToCall: string, params?: any[], arrT
 }
 
 const movies = [
-    { name: 'Avengersssss',   year: 2015 },
+    { name: 'Captain America and the Winter Soldier',   year: 2015 },
     { name: 'Avengers: Infinity War',   year: 2016 },
     { name: 'Avengers: Endgame',   year: 2019 },
     { name: 'The Favourite',   year: 2019 },
     { name: 'Spider Man',   year: 2012 },
-    { name: 'The Glasssessss',   year: 2019 },
+    { name: 'Spider Man: Far From Home',   year: 2019 },
     { name: 'Catch me if you can',   year: 2009 },
-    { name: 'Arenatests',   year: 1990 },
-    { name: 'Add new!!!',   year: 2015 },
 ];
 
 const shoppingCart = [
@@ -47,7 +45,7 @@ getMethod('max', 'returnMinPrice', [false, 'price'], shoppingCart);
 
 getMethod('split', 'splitArray', [2], [1, 3 , 5, 6, 7, 10]);
 
-getMethod('fill', 'fillArrayWithValues',[5, 2, 4], [2, 4, 6, 8]);
+getMethod('fill', 'fillArrayWithValues',[5, 0, 4], [2, 4, 6, 8]);
 
 getMethod('concat', 'concatArr', [[7, 9, 10]], [1, 3, 5]);
 
@@ -112,6 +110,9 @@ getMethod('create-unique', 'createUniqueArr', [10, 'start_']);
 
 const normalArray = [1, 2, 3];
 getMethod('reverse', 'reverseArr', [], normalArray);
+
+
+
 
 
 // ---------------------------------
